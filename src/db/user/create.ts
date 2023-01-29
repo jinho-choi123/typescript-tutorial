@@ -6,12 +6,11 @@ const createUser = (userEmail: String, userPassword1: String, userPassword2: Str
         email: userEmail,
         memoList: []
     })
-    console.log(newUser);
-
+    console.log(newUser)
     //db에서 중복되는 user가 존재하는지 확인한다.
     //그리고 auth container에 요청하여, user add를 한다. request가 성공적이면, mongodb에 add한다.
 
-    
+
     return new Promise((resolve, reject) => {
         db()
             .then((conn) => {
@@ -21,7 +20,6 @@ const createUser = (userEmail: String, userPassword1: String, userPassword2: Str
                 resolve(doc)
             })
             .catch((err) => {
-                console.log("error occur!!!")
                 reject(err)
             })
     })
