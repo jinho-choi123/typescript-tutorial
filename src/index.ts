@@ -1,11 +1,15 @@
 import express, {Request, Response, NextFunction} from 'express';
+import checkserverRouter from './routers/test/checkserver';
+import shownameRouter from './routers/test/showName';
 
 const app = express();
 const port = process.env.PORT || '8080';
 
-app.get('/checkserver', (req: Request, res: Response, next: NextFunction) => {
-    res.send(`Server is running! Current timestamp is ${Date.now()}`);
-});
+// parse request body to json
+app.use(express.json());
+
+app.use('/checkserver', checkserverRouter);
+app.use('/showname', shownameRouter);
 
 app.listen(port, () => {
     console.log(`
