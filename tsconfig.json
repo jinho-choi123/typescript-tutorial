@@ -5,7 +5,7 @@
     /* Projects */
 
     /* Language and Environment */
-    "target": "esnext",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "target": "ES5",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
 
     /* Modules */
     "module": "commonjs",                                /* Specify what module code is generated. */
