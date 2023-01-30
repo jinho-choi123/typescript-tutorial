@@ -16,7 +16,7 @@ const createMemo = (userId: Types.ObjectId, content: String) => {
                 return newMemo.save()
             })
             .then(() => {
-                pushMemoList(userId, memoId)
+                return pushMemoList(userId, memoId)
             })
             .then((doc) => {
                 resolve(doc)
