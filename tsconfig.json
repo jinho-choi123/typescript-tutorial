@@ -20,6 +20,6 @@
     /* Type Checking */
     "strict": true,                                      /* Enable all strict type-checking options. */
     "moduleResolution": "node",	//모듈 해석 방법 설정: 'node' (Node.js)
-    "jsx": "react"
+    "jsx": "react",
   }
 }

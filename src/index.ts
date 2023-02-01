@@ -1,7 +1,7 @@
 import express, {Request, Response, NextFunction} from 'express';
+import authRouter from './routers/auth/authRouter';
 import memoRouter from './routers/memo/memoRouter';
 import checkserverRouter from './routers/test/checkserver';
-import shownameRouter from './routers/test/showName';
 import userRouter from './routers/user/userRouter';
 
 const app = express();
@@ -11,9 +11,9 @@ const port = '10101';
 app.use(express.json());
 
 app.use('/checkserver', checkserverRouter);
-app.use('/showname', shownameRouter);
 app.use('/user', userRouter);
 app.use('/memo', memoRouter);
+app.use('/auth', authRouter);
 
 app.listen(port, () => {
     console.log(`
